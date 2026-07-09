@@ -1,8 +1,10 @@
 # Virtual Environment
+!.env.example
 *.env
 .env*
 env/
 venv/
+forms_env/
 ENV/
 env.bak/
 venv.bak/
