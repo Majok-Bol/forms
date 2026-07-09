@@ -8,7 +8,6 @@ from wtforms import EmailField,PasswordField,StringField,SubmitField
 from wtforms.validators import Email,EqualTo,Length,InputRequired
 load_dotenv()
 app=Flask(__name__)
-
 app.config['SQLALCHEMY_DATABASE_URI']=os.getenv("DATABASE_URL")
 app.config['SECRET_KEY']=os.getenv("CSRF_SECRET_KEY")
 db=SQLAlchemy(app)
@@ -62,4 +61,4 @@ class Users(db.Model):
     email=db.Column(db.String(100),unique=True,nullable=False)
     password=db.Column(db.String(255),nullable=False)
 if __name__=="__main__":
-    app.run(debug=True)
+    app.run(debug=False)
